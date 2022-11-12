@@ -1,0 +1,13 @@
+package com.tdd.examples.Excercises;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class JunitExamplesApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(JunitExamplesApplication.class, args);
+	}
+
+}
