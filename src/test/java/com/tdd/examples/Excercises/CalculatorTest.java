@@ -60,7 +60,7 @@ class CalculatorTest {
 
     @DisplayName("Test 4-2 =2")
     @Test
-    void integerSubtraction() {
+    void testIntegerSubtraction_WhenTwoIsSubtractedFromFour_ShouldTRReturnTwo() {
         int result = calculator.integerSubtraction(4, 2);
         assertEquals(2, result, () -> "4-2 did not produce 2"); //use lambda for lazy initialization for the message, will be executed only if the test fail
     }
