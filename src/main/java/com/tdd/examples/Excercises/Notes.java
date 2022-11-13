@@ -21,7 +21,7 @@ public class Notes {
          Run all the test using maven: mvn test
          skip tests: mvn package -Dmaven.test.skip=true
          pattern name for tests: test<System Under Test>_<Condition or State Change>_<Expected Result>
-         fail("Failed"): Intenionally fail a unit test
+         fail("Failed"): Intentionally fail a unit test
          LifeCycle Tests:
               for each method Junit will create an instance for a class, the execution order is not obvious
               @BeforeAll annotation execute this method before all tests, is to prepare all the resources: setup()
@@ -33,7 +33,10 @@ public class Notes {
          Order of test classes:
             order has to be UserServiceTest,
             ProductServiceTest,
-            OrderServiceTest,
+            OrderServiceTest
+         By default test units create an instance of the class for each test method
+         this could be change to run all the test method with one instance per class, used for integration tests
+         to share instance variables
 
 
      */
