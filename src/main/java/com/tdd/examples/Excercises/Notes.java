@@ -34,9 +34,12 @@ public class Notes {
             order has to be UserServiceTest,
             ProductServiceTest,
             OrderServiceTest
-         By default test units create an instance of the class for each test method
-         this could be change to run all the test method with one instance per class, used for integration tests
-         to share instance variables
+
+         Test Life-cycle:
+             By default test units create an instance of the class for each test method
+             this could be change to run all the test method with one instance per class, used for integration tests
+             to share instance variables.
+             In Instance per class BeforeAll and AfterAll annotations should be non-static
 
 
      */
