@@ -1,8 +1,6 @@
 package com.tdd.examples.Excercises;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.RepeatedTest;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -18,8 +16,12 @@ public class DemoRepeatedTest {
 
 
     @DisplayName("Division by zero")
-    @RepeatedTest(3)//execute the test several times
-    void testIntegerDivision_WhenDividendByZero_ShouldThrowArithmeticException() {
+    @RepeatedTest(value = 3,name = "{displayName}. Repetition {currentRepetition} of {totalRepetitions}")//execute the test several times
+    void testIntegerDivision_WhenDividendByZero_ShouldThrowArithmeticException(
+            RepetitionInfo repetitionInfo,
+            TestInfo testInfo) {
+        System.out.println(repetitionInfo.getCurrentRepetition() + " of #" +repetitionInfo.getTotalRepetitions());
+        System.out.println(testInfo.getTestMethod().get().getName());
         int dividend = 4;
         int divisor = 0;
         String expectedExceptionMessage = "/ by zero";
