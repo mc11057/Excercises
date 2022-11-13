@@ -30,6 +30,11 @@ public class Notes {
               @AfterEach annotation execute this method after each unit test method
          @Disabled("Still need to work on it") annotation to disable unit test
 
+         Order of test classes:
+            order has to be UserServiceTest,
+            ProductServiceTest,
+            OrderServiceTest,
+
 
      */
 
