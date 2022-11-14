@@ -40,6 +40,12 @@ public class JunitNotes {
              this could be change to run all the test method with one instance per class, used for integration tests
              to share instance variables.
              In Instance per class BeforeAll and AfterAll annotations should be non-static
+         TDD: It is a process to structure the development process. First we need to write the Junit tests
+         Steps:
+             Red:Unit test fail,
+             Green:Unit test pass,
+             Refactor Clean up. Improve Code,
+             Repeat above steps
 
 
      */
