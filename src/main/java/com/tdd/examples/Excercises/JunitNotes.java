@@ -1,6 +1,6 @@
 package com.tdd.examples.Excercises;
 
-public class Notes {
+public class JunitNotes {
 
     /*
         The FIRST Principle
