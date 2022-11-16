@@ -111,6 +111,19 @@ public class UserServiceTest {
         assertNotNull(user.getId(),"User id is missing");
         verify(userRepository,times(1)).save(any(User.class));//to verify how many times the method was called
     }
+
+    @DisplayName("Schedule Email Confirmation is executed (Real Call)")
+    @Test
+    void testCreateUser_WhenUserCreated_scheduleEmailConfirmation(){
+        //Arrange
+        when(userRepository.save(any(User.class))).thenReturn(true);
+        //handling exception for void method is different, we use:
+        doCallRealMethod().when(emailVerificationService).scheduleEmailConfirmation(any(User.class));
+        //Act
+        userService.createUser(firstName,lastName,email,password,repeatPassword);
+        //Assert
+        verify(emailVerificationService,times(1)).scheduleEmailConfirmation(any(User.class));
+    }
     /*
     Assert a list
         List<String> numbers = Arrays.asList("one", "two", "three");
