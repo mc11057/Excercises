@@ -46,6 +46,14 @@ public class JunitNotes {
              Green:Unit test pass,
              Refactor Clean up. Improve Code,
              Repeat above steps
+         Mockito allow us to create test double objects, test double is an object that can't stand for a real object in a test
+            Mock
+            Fake
+            Spy
+            Stub
+            are used temporally to replace real objects
+            we can handle how to return a value of if we want to reproduce an exception for a specific double object test
+            We need to isolate the method under test of all the dependencies
 
 
      */
