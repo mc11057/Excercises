@@ -1,6 +1,7 @@
 package com.tdd.examples.Excercises.service;
 
 import com.tdd.examples.Excercises.data.UserRepository;
+import com.tdd.examples.Excercises.data.UserRepositoryImpl;
 import com.tdd.examples.Excercises.model.User;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -21,7 +22,7 @@ public class UserServiceTest {
     @InjectMocks
     UserServiceImpl userService;
     @Mock
-    UserRepository userRepository;
+    UserRepositoryImpl userRepository;
     @Mock
     EmailVerificationServiceImpl emailVerificationService;
     String firstName;
